@@ -11,3 +11,4 @@ webpack.config.js
 .npmrc
 .babelrc
 CHANGELOG.md
+__tests__
