@@ -1,5 +1,12 @@
 import React from 'react';
 import {render} from 'react-dom';
-import ReactComponentTemplate from '..';
+import ReactComponentTemplate from '../src';
 
-render(<ReactComponentTemplate />, document.getElementById('app'));
+function start() {
+    render(<ReactComponentTemplate />, document.getElementById('app'));
+}
+
+start();
+
+if(module.hot) start();
+

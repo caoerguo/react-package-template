@@ -4,9 +4,11 @@
   "description": "拖拖拽拽生成页面",
   "main": "lib/index.js",
   "scripts": {
-    "dev": "npm run build && webpack-dev-server",
+    "dev": "webpack-dev-server",
     "test": "jest",
-    "build": "rm -rf ./lib/* && babel src --out-dir lib --copy-files",
+    "compile": "babel src --out-dir lib --copy-files",
+    "build": "npm run rm && npm run compile",
+    "rm": "rm -rf ./lib/*",
     "prepublish": "npm run build",
     "commit": "git-cz"
   },
@@ -37,8 +39,8 @@
     "react-dom": "^15.6.1",
     "react-transition-group": "^2.0.2",
     "uuid": "^2.0.2",
-    "webpack": "^3.3.0",
-    "webpack-dev-server": "^2.5.1"
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4"
   },
   "peerDependencies": {
     "node-sass": "^4.5.3",
