@@ -1,0 +1,17 @@
+// 配置项说明 https://www.typescriptlang.org/docs/handbook/compiler-options.html
+{
+    "extends": "./node_modules/@talentui/tools/typescript/ts.json",
+    "compilerOptions": {
+        "strict": true,
+        "sourceMap":false,
+        "declaration": true,
+        "allowJs": false, //默认配置allowJS是打开的，此开关不能和delcaration同时打开。
+        "allowSyntheticDefaultImports": true,
+        "declarationDir": "types",
+        "outDir": "lib",
+        "baseUrl": "./"
+    },
+    "include": [
+        "src"
+    ]
+}
